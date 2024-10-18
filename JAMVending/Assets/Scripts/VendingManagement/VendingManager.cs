@@ -52,6 +52,7 @@ public class VendingManager : MonoBehaviour
 
     private void placeDecoration(InputAction.CallbackContext context)
     {
+        grid.SetActive(true);
         if (decorationToPlace != null)
         {
             Tile nearestTile = null;

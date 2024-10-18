@@ -109,8 +109,8 @@ public class CameraManager : MonoBehaviour
 
         if (Mathf.Abs(value) > 0.1f )
         {
-            zoomHeight = vcam.Lens.OrthographicSize + value * stepSize;
-            Vector2 mousePosition = Mouse.current.position.ReadValue();
+            zoomHeight = Camera.main.orthographicSize + value * stepSize;
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
             targetPosition = mousePosition;
             if ( zoomHeight < minHeight)
             {
